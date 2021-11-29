@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C10F00C27555A02003E5DF2 /* The_BrawlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F00B27555A02003E5DF2 /* The_BrawlApp.swift */; };
+		4C10F00E27555A02003E5DF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F00D27555A02003E5DF2 /* ContentView.swift */; };
+		4C10F01027555A03003E5DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C10F00F27555A03003E5DF2 /* Assets.xcassets */; };
+		4C10F01327555A03003E5DF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C10F01227555A03003E5DF2 /* Preview Assets.xcassets */; };
+		4C10F01527555A03003E5DF2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F01427555A03003E5DF2 /* Persistence.swift */; };
+		4C10F01827555A03003E5DF2 /* The_Brawl.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F01627555A03003E5DF2 /* The_Brawl.xcdatamodeld */; };
+		4C10F02127555B76003E5DF2 /* WoodFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02027555B76003E5DF2 /* WoodFight.swift */; };
+		4C10F02327555C1B003E5DF2 /* launcherGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02227555C1B003E5DF2 /* launcherGame.swift */; };
+		4C10F02527555C53003E5DF2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02427555C53003E5DF2 /* Data.swift */; };
+		4C10F02727555CD0003E5DF2 /* gameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02627555CD0003E5DF2 /* gameView.swift */; };
+		4C10F02A27555D1B003E5DF2 /* centerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02927555D1B003E5DF2 /* centerScreen.swift */; };
+		4C10F02C27555D4D003E5DF2 /* gamerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02B27555D4D003E5DF2 /* gamerInfo.swift */; };
+		4C10F02E27555D88003E5DF2 /* myAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02D27555D88003E5DF2 /* myAds.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4C10F00827555A02003E5DF2 /* The Brawl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Brawl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C10F00B27555A02003E5DF2 /* The_BrawlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_BrawlApp.swift; sourceTree = "<group>"; };
+		4C10F00D27555A02003E5DF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C10F00F27555A03003E5DF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C10F01227555A03003E5DF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C10F01427555A03003E5DF2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4C10F01727555A03003E5DF2 /* The_Brawl.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = The_Brawl.xcdatamodel; sourceTree = "<group>"; };
+		4C10F02027555B76003E5DF2 /* WoodFight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodFight.swift; sourceTree = "<group>"; };
+		4C10F02227555C1B003E5DF2 /* launcherGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launcherGame.swift; sourceTree = "<group>"; };
+		4C10F02427555C53003E5DF2 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		4C10F02627555CD0003E5DF2 /* gameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameView.swift; sourceTree = "<group>"; };
+		4C10F02927555D1B003E5DF2 /* centerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = centerScreen.swift; sourceTree = "<group>"; };
+		4C10F02B27555D4D003E5DF2 /* gamerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gamerInfo.swift; sourceTree = "<group>"; };
+		4C10F02D27555D88003E5DF2 /* myAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myAds.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C10F00527555A02003E5DF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C10EFFF27555A02003E5DF2 = {
+			isa = PBXGroup;
+			children = (
+				4C10F00A27555A02003E5DF2 /* The Brawl */,
+				4C10F00927555A02003E5DF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C10F00927555A02003E5DF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C10F00827555A02003E5DF2 /* The Brawl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C10F00A27555A02003E5DF2 /* The Brawl */ = {
+			isa = PBXGroup;
+			children = (
+				4C10F01F27555B28003E5DF2 /* Screens */,
+				4C10F01E27555B22003E5DF2 /* Managers - Data */,
+				4C10F00B27555A02003E5DF2 /* The_BrawlApp.swift */,
+				4C10F00D27555A02003E5DF2 /* ContentView.swift */,
+				4C10F00F27555A03003E5DF2 /* Assets.xcassets */,
+				4C10F01427555A03003E5DF2 /* Persistence.swift */,
+				4C10F01627555A03003E5DF2 /* The_Brawl.xcdatamodeld */,
+				4C10F01127555A03003E5DF2 /* Preview Content */,
+			);
+			path = "The Brawl";
+			sourceTree = "<group>";
+		};
+		4C10F01127555A03003E5DF2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4C10F01227555A03003E5DF2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4C10F01E27555B22003E5DF2 /* Managers - Data */ = {
+			isa = PBXGroup;
+			children = (
+				4C10F02027555B76003E5DF2 /* WoodFight.swift */,
+				4C10F02427555C53003E5DF2 /* Data.swift */,
+			);
+			path = "Managers - Data";
+			sourceTree = "<group>";
+		};
+		4C10F01F27555B28003E5DF2 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4C10F02827555D07003E5DF2 /* Extracted */,
+				4C10F02227555C1B003E5DF2 /* launcherGame.swift */,
+				4C10F02627555CD0003E5DF2 /* gameView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4C10F02827555D07003E5DF2 /* Extracted */ = {
+			isa = PBXGroup;
+			children = (
+				4C10F02927555D1B003E5DF2 /* centerScreen.swift */,
+				4C10F02B27555D4D003E5DF2 /* gamerInfo.swift */,
+				4C10F02D27555D88003E5DF2 /* myAds.swift */,
+			);
+			path = Extracted;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C10F00727555A02003E5DF2 /* The Brawl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C10F01B27555A03003E5DF2 /* Build configuration list for PBXNativeTarget "The Brawl" */;
+			buildPhases = (
+				4C10F00427555A02003E5DF2 /* Sources */,
+				4C10F00527555A02003E5DF2 /* Frameworks */,
+				4C10F00627555A02003E5DF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "The Brawl";
+			productName = "The Brawl";
+			productReference = 4C10F00827555A02003E5DF2 /* The Brawl.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C10F00027555A02003E5DF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					4C10F00727555A02003E5DF2 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 4C10F00327555A02003E5DF2 /* Build configuration list for PBXProject "The Brawl" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C10EFFF27555A02003E5DF2;
+			productRefGroup = 4C10F00927555A02003E5DF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C10F00727555A02003E5DF2 /* The Brawl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C10F00627555A02003E5DF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C10F01327555A03003E5DF2 /* Preview Assets.xcassets in Resources */,
+				4C10F01027555A03003E5DF2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C10F00427555A02003E5DF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C10F02527555C53003E5DF2 /* Data.swift in Sources */,
+				4C10F01527555A03003E5DF2 /* Persistence.swift in Sources */,
+				4C10F02327555C1B003E5DF2 /* launcherGame.swift in Sources */,
+				4C10F02E27555D88003E5DF2 /* myAds.swift in Sources */,
+				4C10F00E27555A02003E5DF2 /* ContentView.swift in Sources */,
+				4C10F01827555A03003E5DF2 /* The_Brawl.xcdatamodeld in Sources */,
+				4C10F00C27555A02003E5DF2 /* The_BrawlApp.swift in Sources */,
+				4C10F02C27555D4D003E5DF2 /* gamerInfo.swift in Sources */,
+				4C10F02727555CD0003E5DF2 /* gameView.swift in Sources */,
+				4C10F02127555B76003E5DF2 /* WoodFight.swift in Sources */,
+				4C10F02A27555D1B003E5DF2 /* centerScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4C10F01927555A03003E5DF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4C10F01A27555A03003E5DF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C10F01C27555A03003E5DF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"The Brawl/Preview Content\"";
+				DEVELOPMENT_TEAM = 8KNDU683WL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "parentheze.The-Brawl";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C10F01D27555A03003E5DF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"The Brawl/Preview Content\"";
+				DEVELOPMENT_TEAM = 8KNDU683WL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "parentheze.The-Brawl";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C10F00327555A02003E5DF2 /* Build configuration list for PBXProject "The Brawl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C10F01927555A03003E5DF2 /* Debug */,
+				4C10F01A27555A03003E5DF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C10F01B27555A03003E5DF2 /* Build configuration list for PBXNativeTarget "The Brawl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C10F01C27555A03003E5DF2 /* Debug */,
+				4C10F01D27555A03003E5DF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4C10F01627555A03003E5DF2 /* The_Brawl.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4C10F01727555A03003E5DF2 /* The_Brawl.xcdatamodel */,
+			);
+			currentVersion = 4C10F01727555A03003E5DF2 /* The_Brawl.xcdatamodel */;
+			path = The_Brawl.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4C10F00027555A02003E5DF2 /* Project object */;
+}
