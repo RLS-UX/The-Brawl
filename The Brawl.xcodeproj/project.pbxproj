@@ -16,7 +16,7 @@
 		4C10F02127555B76003E5DF2 /* WoodFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02027555B76003E5DF2 /* WoodFight.swift */; };
 		4C10F02327555C1B003E5DF2 /* launcherGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02227555C1B003E5DF2 /* launcherGame.swift */; };
 		4C10F02527555C53003E5DF2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02427555C53003E5DF2 /* Data.swift */; };
-		4C10F02727555CD0003E5DF2 /* gameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02627555CD0003E5DF2 /* gameView.swift */; };
+		4C10F02727555CD0003E5DF2 /* gameViewTwoP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02627555CD0003E5DF2 /* gameViewTwoP.swift */; };
 		4C10F02A27555D1B003E5DF2 /* centerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02927555D1B003E5DF2 /* centerScreen.swift */; };
 		4C10F02C27555D4D003E5DF2 /* gamerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02B27555D4D003E5DF2 /* gamerInfo.swift */; };
 		4C10F02E27555D88003E5DF2 /* myAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02D27555D88003E5DF2 /* myAds.swift */; };
@@ -33,7 +33,7 @@
 		4C10F02027555B76003E5DF2 /* WoodFight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodFight.swift; sourceTree = "<group>"; };
 		4C10F02227555C1B003E5DF2 /* launcherGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launcherGame.swift; sourceTree = "<group>"; };
 		4C10F02427555C53003E5DF2 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		4C10F02627555CD0003E5DF2 /* gameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameView.swift; sourceTree = "<group>"; };
+		4C10F02627555CD0003E5DF2 /* gameViewTwoP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewTwoP.swift; sourceTree = "<group>"; };
 		4C10F02927555D1B003E5DF2 /* centerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = centerScreen.swift; sourceTree = "<group>"; };
 		4C10F02B27555D4D003E5DF2 /* gamerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gamerInfo.swift; sourceTree = "<group>"; };
 		4C10F02D27555D88003E5DF2 /* myAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myAds.swift; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			children = (
 				4C10F02827555D07003E5DF2 /* Extracted */,
 				4C10F02227555C1B003E5DF2 /* launcherGame.swift */,
-				4C10F02627555CD0003E5DF2 /* gameView.swift */,
+				4C10F02627555CD0003E5DF2 /* gameViewTwoP.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -159,6 +159,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				fr,
 				Base,
 			);
 			mainGroup = 4C10EFFF27555A02003E5DF2;
@@ -196,7 +197,7 @@
 				4C10F01827555A03003E5DF2 /* The_Brawl.xcdatamodeld in Sources */,
 				4C10F00C27555A02003E5DF2 /* The_BrawlApp.swift in Sources */,
 				4C10F02C27555D4D003E5DF2 /* gamerInfo.swift in Sources */,
-				4C10F02727555CD0003E5DF2 /* gameView.swift in Sources */,
+				4C10F02727555CD0003E5DF2 /* gameViewTwoP.swift in Sources */,
 				4C10F02127555B76003E5DF2 /* WoodFight.swift in Sources */,
 				4C10F02A27555D1B003E5DF2 /* centerScreen.swift in Sources */,
 			);
@@ -344,7 +345,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "parentheze.The-Brawl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -376,7 +377,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "parentheze.The-Brawl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

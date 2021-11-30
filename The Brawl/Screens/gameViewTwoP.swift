@@ -1,5 +1,5 @@
 //
-//  gameView.swift
+//  gameViewTwoP.swift
 //  The Brawl
 //
 //  Created by rémy seillier on 29/11/2021.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct gameView: View {
+struct gameViewTwoP: View {
     @State var randMildle = Double.random(in: -2...2)
     @State var arrayXY:[CGFloat] = [1,1]
     @State var pWhoGame:Int = 0          // <= angle fleche du milieu
@@ -16,7 +16,7 @@ struct gameView: View {
     @State var pTwoStats:[Int] = [30,4,0]
     @State var colorForPlay:[Color] =  [.black,Color("myBrown"),.black]
     //[.teal,.purple,.teal]
-    @State var lastAction:String = " Première action conseillée : \rCharger le bouclier"
+    @State var lastAction:String = "Recommended first action:\rchange shield"
     
     var body: some View {
         GeometryReader { geometry in
@@ -48,7 +48,7 @@ struct gameView: View {
                                             self.arrayXY = [1,1]
                                             self.colorForPlay = [.black,Color("myBrown-1"),.black]
                                         }) {
-                                            Text("Bouclier")
+                                            Text("Shield")
                                                 .bold()
                                         }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: 6)) }
                                     if pTwoStats[2] == 0 {
@@ -61,7 +61,7 @@ struct gameView: View {
                                             self.arrayXY = [1,1]
                                             self.colorForPlay = [.black,Color("myBrown-1"),.black]
                                         }) {
-                                            Text("Charger")
+                                            Text("Load")
                                                 .bold()
                                         }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: -5)) }
                                     if pTwoStats[2] == 0 {
@@ -87,7 +87,7 @@ struct gameView: View {
                                         self.arrayXY = [1,1]
                                         self.colorForPlay = [.black,Color("myBrown-1"),.black]
                                     }) {
-                                        Text("Attaquer")
+                                        Text("Attack")
                                             .bold()
                                     }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: -6))
                                 }
@@ -97,7 +97,7 @@ struct gameView: View {
                             .frame(width: geometry.size.width*0.5)
                             .rotationEffect(.degrees(-180))
                         VStack{
-                            gamerInfo(nameInfo: "Joueur 2", healthInfo: pTwoStats[0], swordInfo: pTwoStats[1])
+                            gamerInfo(nameInfo: "Player 2", healthInfo: pTwoStats[0], swordInfo: pTwoStats[1])
                                 .rotationEffect(.degrees(Double(180)))
                                 .frame(width: geometry.size.width/2)
                                 .scaledToFit()
@@ -132,7 +132,7 @@ struct gameView: View {
                                     .shadow(color: Color("myBrown-1"), radius: 1, x: 1, y: 1)
                                     .padding()
                             }.scaledToFit()
-                            gamerInfo(nameInfo: "Joueur 1", healthInfo: pOneStats[0], swordInfo: pOneStats[1])
+                            gamerInfo(nameInfo: "Player 1", healthInfo: pOneStats[0], swordInfo: pOneStats[1])
                         }
                         Spacer()
                         if pWhoGame == 0 {
@@ -148,7 +148,7 @@ struct gameView: View {
                                         self.arrayXY = [-1,-1]
                                         self.colorForPlay = [.black,Color("myBrown"),.black]
                                     }) {
-                                        Text("Bouclier")
+                                        Text("Shield")
                                             .bold()
                                     }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: 6))
                                     
@@ -163,7 +163,7 @@ struct gameView: View {
                                         self.arrayXY = [-1,-1]
                                         self.colorForPlay = [.black,Color("myBrown"),.black]
                                     }) {
-                                        Text("Charger")
+                                        Text("Load")
                                             .bold()
                                     }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: -5))
                                     
@@ -192,7 +192,7 @@ struct gameView: View {
                                     self.arrayXY = [-1,-1]
                                     self.colorForPlay = [.black,Color("myBrown"),.black]
                                 }) {
-                                    Text("Attaquer")
+                                    Text("Attack")
                                         .bold()
                                 }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: -6))
                                 
@@ -232,7 +232,7 @@ struct GradientButtonStyle: ButtonStyle {
             .scaledToFill()
             .minimumScaleFactor(0.1)
             .lineLimit(1)
-            .font(.system(size: 50))
+            .font(.system(size: 14))
             .foregroundColor(.white)
             .padding()
             .shadow(color: Color("myBrown"), radius: 0, x: 0, y: -1)
@@ -247,6 +247,6 @@ struct GradientButtonStyle: ButtonStyle {
 
 struct gameView_Previews: PreviewProvider {
     static var previews: some View {
-        gameView()
+        gameViewTwoP()
     }
 }

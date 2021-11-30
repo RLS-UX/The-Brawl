@@ -13,3 +13,5 @@ let gamerules = ["Règle 1 - Chaque joueurs commence avec 30 PV",
     "Règle 3 - Le sabotage force le changement de bouclier adverse.",
     "Règle 4 - On peut charger une attaque.",
     "Règle 5 - Si on prend des dégâts, on perd ça charge."]
+
+let theGameSay = ["Error order no found(01)"," Première action conseillée : \rCharger le bouclier","","","",""]

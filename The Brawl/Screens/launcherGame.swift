@@ -42,7 +42,7 @@ struct launcherGame: View {
                         Text("")
                     } } )
             } else {
-                gameView().transition(.slide)
+                gameViewTwoP().transition(.slide)
             }
             if goToView == false {
                 VStack{
