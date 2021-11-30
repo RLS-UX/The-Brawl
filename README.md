@@ -9,6 +9,6 @@ For now, it’s designed with a lot of swiftUI.
 ![alt tag](https://i.ibb.co/zHLYdmd/The-Brawl-First-Look.png)  
 
 
-$[![forthebadge](https://forthebadge.com/images/badges/compatibility-betamax.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/compatibility-betamax.svg)](parentheze.fr)
 
 All iphone compatible with iOS 15.
