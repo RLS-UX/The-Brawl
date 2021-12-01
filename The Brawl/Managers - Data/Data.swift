@@ -8,10 +8,10 @@
 import Foundation
 
 
-let gamerules = ["Règle 1 - Chaque joueurs commence avec 30 PV",
-    "Règle 2 - Chaque joueurs commence avec 7 de bouclier",
-    "Règle 3 - Le sabotage force le changement de bouclier adverse.",
-    "Règle 4 - On peut charger une attaque.",
-    "Règle 5 - Si on prend des dégâts, on perd ça charge."]
+let gamerules = ["Rule 1 - Each player starts with 30 Health Points",
+    "Rule 2 - Each player starts with 7 shield Points",
+    "Rule 3 - Sabotage forces the opponent's shield to change.",
+    "Rule 4 - You can charge an attack to hit harder!",
+    "Rule 5 - If you take damage, you lose your charge attack."]
 
 let theGameSay = ["Error order no found(01)"," Première action conseillée : \rCharger le bouclier","","","",""]
