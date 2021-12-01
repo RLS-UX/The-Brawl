@@ -11,8 +11,8 @@ import SwiftUI
 struct gameViewTwoP: View {
     @State var randMildle = Double.random(in: -2...2)
     @State var arrayXY:[CGFloat] = [1,1]
-    @State var pWhoGame:Int = 0          // <= angle fleche du milieu
-    @State var pOneStats:[Int] = [30,4,0]     // <= [Vie,Boublier,attaque de charge]
+    @State var pWhoGame:Int = 0          // Arrow center & another
+    @State var pOneStats:[Int] = [30,4,0]     // <= [health,shield,charge Attack]
     @State var pTwoStats:[Int] = [30,4,0]
     @State var colorForPlay:[Color] =  [.black,Color("myBrown"),.black]
     //[.teal,.purple,.teal]
@@ -25,7 +25,6 @@ struct gameViewTwoP: View {
                     .foregroundColor(.black)
                     .ignoresSafeArea()
                 LinearGradient(colors: colorForPlay, startPoint: .bottom, endPoint: .top)
-                //                .opacity(0.95)
                     .blur(radius: 90)
                     .ignoresSafeArea()
                 centerScreen()

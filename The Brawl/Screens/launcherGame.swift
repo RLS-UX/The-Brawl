@@ -29,8 +29,6 @@ struct launcherGame: View {
                         
                         Spacer()
                         Text("2 Players")
-                            //.font(Font.custom("EnchantedLand", size: 33))
-                            //.font(.system(size: 60))
                             .bold()
                             .foregroundColor(.black)
                             .padding()
@@ -52,8 +50,6 @@ struct launcherGame: View {
                         .gradientForeground(colors: [.brown,.yellow,.brown])
                         .font(.system(size: CGFloat.random(in: 20...30)))
                         .rotationEffect(.degrees(textDegree))
-//                        .shadow(color: .red, radius: 0, x: 1, y: -1)
-//                        .shadow(color: .green, radius: 0, x: -1, y: 1)
                 }.onTapGesture {
                     self.rulesOfGame = gamerules[Int.random(in: 0...4)]
                     self.textDegree = Double.random(in: -5...5)

@@ -53,21 +53,21 @@ func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int]) -> (pOneResult:[Int], pTwo
     if oderExe == 1 {
         let tempShield = cardSorting()
         pOneResult[1] = tempShield
-        gameSaying = "Le nouveau bouclier du \rJoueur 1 est de \(tempShield)."
+        gameSaying = "Player 1's new shield is  \(tempShield)."
     }
     
     //Player 1 charge an Attack
     if oderExe == 2 {
         let tempChargeAttack = cardSorting()
         pOneResult[2] = tempChargeAttack
-        gameSaying = "Le Joueur 1 a chargé une attaque."
+        gameSaying = "Player 1 has charged an attack."
     }
     
     //Modify shield for the other Player
     if oderExe == 3 {
         let tempShield = cardSorting()
         pTwoResult[1] = tempShield
-        gameSaying = "Le nouveau bouclier du \rJoueur 2 est de \(tempShield)."
+        gameSaying = "Player 2's new shield is \(tempShield)."
     }
     
     //Player 1 tries to attack
@@ -77,43 +77,43 @@ func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int]) -> (pOneResult:[Int], pTwo
             let suspendedAttack = pOne[2]
             if (tempAttaque+suspendedAttack) >= pTwo[1] {
                 pTwoResult[0] =  pTwo[0]-((tempAttaque+suspendedAttack)-pTwo[1])
-                gameSaying = "Le Joueur 1 a fait une attaque chargée.\rLa charge était de \(suspendedAttack) & \(tempAttaque).\rIl reste \(pTwoResult[0]) de vie au Joueur 2"
+                gameSaying = "Player 1 made a charged attack. The charge was \(suspendedAttack) & \(tempAttaque).\rPlayer 2 has\(pTwoResult[0]) health"
                 pTwoResult[2] = 0
                 pOneResult[2] = 0
             }
             else {
-                gameSaying = "L'attaque a échouée."
+                gameSaying = "The attack failed."
                 pOneResult[2] = 0
             }
         } else {
             if tempAttaque >= pTwo[1] {
                 pTwoResult[0] =  pTwo[0]-(tempAttaque-pTwo[1])
-                gameSaying = "Le joueur 1 a attaqué, il à fait une attaque de \(tempAttaque).\rLe joueur 2 à perdu \(tempAttaque-pTwo[1]) de vie."
+                gameSaying = "Player 1 attacked, he made an attack of  \(tempAttaque).\rPlayer 2 lost \(tempAttaque-pTwo[1]) health."
                 pTwoResult[2] = 0
                 pOneResult[2] = 0
             } else {
-                gameSaying = "L'attaque a échouée."
+                gameSaying = "The attack failed."
             }   }    }
     
     //Shield change Player 2
     if oderExe == 5 {
         let tempShield = cardSorting()
         pTwoResult[1] = tempShield
-        gameSaying = "Le nouveau bouclier du \rJoueur 2 est de \(tempShield)."
+        gameSaying = "Player 2's new shield is \(tempShield)."
     }
     
     //Player 2 charge an Attack
     if oderExe == 6 {
         let tempChargeAttack = cardSorting()
         pTwoResult[2] = tempChargeAttack
-        gameSaying = "Le Joueur 2 a chargé une attaque."
+        gameSaying = "Player 2 has charged an attack."
     }
     
     //Modify shield for the other Player
     if oderExe == 7 {
         let tempShield = cardSorting()
         pOneResult[1] = tempShield
-        gameSaying = "Le nouveau bouclier du \rJoueur 1 est de \(tempShield)."
+        gameSaying = "Player 1's new shield is\(tempShield)."
     }
     
     //Player 2 tries to attack
@@ -123,22 +123,22 @@ func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int]) -> (pOneResult:[Int], pTwo
             let suspendedAttack = pTwo[2]
             if (tempAttaque+suspendedAttack) >= pOne[1] {
                 pOneResult[0] = pOne[0]-((tempAttaque+suspendedAttack)-pOne[1])
-                gameSaying = "Le Joueur 2 a fait une attaque chargée.\rLa charge était de \(suspendedAttack) & \(tempAttaque).\rIl reste \(pOneResult[0]) de vie au Joueur 2"
+                gameSaying = "Player 2 made a charged attack. The charge was \(suspendedAttack) & \(tempAttaque).\rPlayer 1 has\(pOneResult[0]) health."
                 pTwoResult[2] = 0
                 pOneResult[2] = 0
             }
             else {
-                gameSaying = "L'attaque a échouée."
+                gameSaying = "The attack failed."
                 pTwoResult[2] = 0
             }
         } else {
             if tempAttaque >= pOne[1] {
                 pOneResult[0] = pOne[0]-(tempAttaque-pOne[1])
-                gameSaying = "Le joueur 2 a attaqué, il à fait une attaque de \(tempAttaque).\rLe joueur 1 à perdu \(tempAttaque-pOne[1]) de vie."
+                gameSaying = "Player 2 attacked, he made an attack of  \(tempAttaque).\rPlayer 2 has \(tempAttaque-pOne[1]) health."
                 pTwoResult[2] = 0
                 pOneResult[2] = 0
             } else {
-                gameSaying = "L'attaque a échouée."
+                gameSaying = "The attack failed."
             }   }    }
     
     

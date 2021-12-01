@@ -26,7 +26,6 @@ struct gamerInfo: View {
                     .font(.title2)
                     .bold()
                     .foregroundColor(.white)
-                    //.shadow(color: .white, radius: 1, x: -1, y: -1)
                     .shadow(color: .black, radius: 1, x: 1, y: 1)
                     .shadow(color: .black, radius: 1, x: -1, y: -1)
 
