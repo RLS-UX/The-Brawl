@@ -4,6 +4,7 @@
 //
 //  Created by rémy seillier on 29/11/2021.
 //
+//Ecran de fin à traduire.
 
 import Foundation
 import SwiftUI
@@ -77,7 +78,7 @@ func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int]) -> (pOneResult:[Int], pTwo
             let suspendedAttack = pOne[2]
             if (tempAttaque+suspendedAttack) >= pTwo[1] {
                 pTwoResult[0] =  pTwo[0]-((tempAttaque+suspendedAttack)-pTwo[1])
-                gameSaying = "Player 1 made a charged attack. The charge was \(suspendedAttack) & \(tempAttaque).\rPlayer 2 has\(pTwoResult[0]) health"
+                gameSaying = "Player 1 made a charged attack. The charge was \(suspendedAttack) & \(tempAttaque).\rPlayer 2 has \(pTwoResult[0]) health"
                 pTwoResult[2] = 0
                 pOneResult[2] = 0
             }
@@ -123,7 +124,7 @@ func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int]) -> (pOneResult:[Int], pTwo
             let suspendedAttack = pTwo[2]
             if (tempAttaque+suspendedAttack) >= pOne[1] {
                 pOneResult[0] = pOne[0]-((tempAttaque+suspendedAttack)-pOne[1])
-                gameSaying = "Player 2 made a charged attack. The charge was \(suspendedAttack) & \(tempAttaque).\rPlayer 1 has\(pOneResult[0]) health."
+                gameSaying = "Player 2 made a charged attack. The charge was \(suspendedAttack) & \(tempAttaque).\rPlayer 1 has \(pOneResult[0]) health."
                 pTwoResult[2] = 0
                 pOneResult[2] = 0
             }

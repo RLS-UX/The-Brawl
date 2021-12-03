@@ -14,7 +14,7 @@ struct gameViewTwoP: View {
     @State var pWhoGame:Int = 0          // Arrow center & another
     @State var pOneStats:[Int] = [30,4,0]     // <= [health,shield,charge Attack]
     @State var pTwoStats:[Int] = [30,4,0]
-    @State var colorForPlay:[Color] =  [.black,Color("myBrown"),.black]
+    @State var colorForPlay:[Color] =  [.gray,Color("myBrown-1"),.gray]
     //[.teal,.purple,.teal]
     @State var lastAction:String = "Recommended first action:\rchange shield"
     
@@ -27,6 +27,7 @@ struct gameViewTwoP: View {
                 LinearGradient(colors: colorForPlay, startPoint: .bottom, endPoint: .top)
                     .blur(radius: 90)
                     .ignoresSafeArea()
+                    .opacity(0.7)
                 centerScreen()
                     .ignoresSafeArea()
                     .padding(-20)
@@ -49,7 +50,7 @@ struct gameViewTwoP: View {
                                         }) {
                                             Text("Shield")
                                                 .bold()
-                                        }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: 6)) }
+                                        }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown")],numDegrees: 6)) }
                                     if pTwoStats[2] == 0 {
                                         Button(action: {
                                             let tempAction = gameManager(oderExe: 6, pOne: pOneStats, pTwo: pTwoStats)
@@ -62,7 +63,7 @@ struct gameViewTwoP: View {
                                         }) {
                                             Text("Load")
                                                 .bold()
-                                        }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: -5)) }
+                                        }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown")],numDegrees: -5)) }
                                     if pTwoStats[2] == 0 {
                                         Button(action: {
                                             let tempAction = gameManager(oderExe: 7, pOne: pOneStats, pTwo: pTwoStats)
@@ -75,7 +76,7 @@ struct gameViewTwoP: View {
                                         }) {
                                             Text("Sabotage")
                                                 .bold()
-                                        }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: 5))
+                                        }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown")],numDegrees: 5))
                                     }
                                     Button(action: {
                                         let tempAction = gameManager(oderExe: 8, pOne: pOneStats, pTwo: pTwoStats)
@@ -88,7 +89,8 @@ struct gameViewTwoP: View {
                                     }) {
                                         Text("Attack")
                                             .bold()
-                                    }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: -6))
+                                    }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown")],numDegrees: -6))
+                                    Spacer()
                                 }
                             }
                         }
@@ -107,10 +109,10 @@ struct gameViewTwoP: View {
                                     .minimumScaleFactor(0.01)
                                     .lineLimit(4)
                                     .font(.largeTitle)
-                                    .foregroundColor(Color("colorTxt"))
+                                    .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
-                                    .shadow(color: Color("myBrown"), radius: 1, x: -1, y: -1)
-                                    .shadow(color: Color("myBrown-1"), radius: 1, x: 1, y: 1)
+                                    .shadow(color: .black, radius: 2, x: -2, y: -2)
+                                    .shadow(color: .black, radius: 2, x: 2, y: 2)
                                     .padding()
                                     .rotationEffect(.degrees(-180))
                                 Image("fleche")
@@ -125,10 +127,10 @@ struct gameViewTwoP: View {
                                     .minimumScaleFactor(0.01)
                                     .lineLimit(4)
                                     .font(.largeTitle)
-                                    .foregroundColor(Color("colorTxt"))
+                                    .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
-                                    .shadow(color: Color("myBrown"), radius: 1, x: -1, y: -1)
-                                    .shadow(color: Color("myBrown-1"), radius: 1, x: 1, y: 1)
+                                    .shadow(color: .black, radius: 2, x: -2, y: -2)
+                                    .shadow(color: .black, radius: 2, x: 2, y: 2)
                                     .padding()
                             }.scaledToFit()
                             gamerInfo(nameInfo: "Player 1", healthInfo: pOneStats[0], swordInfo: pOneStats[1])
@@ -149,7 +151,7 @@ struct gameViewTwoP: View {
                                     }) {
                                         Text("Shield")
                                             .bold()
-                                    }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: 6))
+                                    }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown")],numDegrees: 6))
                                     
                                 }
                                 if pOneStats[2] == 0 {
@@ -164,7 +166,7 @@ struct gameViewTwoP: View {
                                     }) {
                                         Text("Load")
                                             .bold()
-                                    }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: -5))
+                                    }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown")],numDegrees: -5))
                                     
                                 }
                                 if pOneStats[2] == 0 {
@@ -179,7 +181,7 @@ struct gameViewTwoP: View {
                                     }) {
                                         Text("Sabotage")
                                             .bold()
-                                    }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: 5))
+                                    }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown")],numDegrees: 5))
                                     
                                 }
                                 Button(action: {
@@ -193,7 +195,7 @@ struct gameViewTwoP: View {
                                 }) {
                                     Text("Attack")
                                         .bold()
-                                }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-1")],numDegrees: -6))
+                                }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown")],numDegrees: -6))
                                 
                             }.scaledToFit()
                                 .frame(width: geometry.size.width*0.5)
@@ -203,7 +205,7 @@ struct gameViewTwoP: View {
                 }
                 else
                 {
-                    Text("Fin de jeu \rJ O U E U R   1 : \(pOneStats[0])\rJ O U E U R   2 : \(pTwoStats[0])\rAppuie pour restart")
+                    Text("EndGame \rP L A Y E R   1 : \(pOneStats[0])\rP L A Y E R   2 : \(pTwoStats[0])\rTouch for restart")
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(.white)
@@ -214,7 +216,7 @@ struct gameViewTwoP: View {
                             self.pOneStats = [30,4,0]
                             self.pTwoStats = [30,4,0]
                             self.pWhoGame = 180
-                            self.lastAction = "Nouvelle partie"
+                            self.lastAction = "New game 🗡"
                         }
                 }
             }
@@ -234,11 +236,11 @@ struct GradientButtonStyle: ButtonStyle {
             .font(.system(size: 14))
             .foregroundColor(.white)
             .padding()
-            .shadow(color: Color("myBrown"), radius: 0, x: 0, y: -1)
+            .shadow(color: Color("myBrown-1"), radius: 0, x: 0, y: -1)
             .shadow(color: .black, radius: 1, x: 0, y: 1)
             .background(LinearGradient(gradient: Gradient(colors: lesCouleurs), startPoint: .top, endPoint: .bottom))
             .cornerRadius(30.0)
-            .shadow(color: Color("myBrown-1"), radius: 1, x: -1, y: -1)
+            .shadow(color: .white, radius: 0, x: -0, y: -1)
             .shadow(color: .black, radius: 1, x: 1, y: 1)
             .rotationEffect(.degrees(Double(numDegrees)))
     }
