@@ -20,6 +20,9 @@
 		4C10F02A27555D1B003E5DF2 /* centerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02927555D1B003E5DF2 /* centerScreen.swift */; };
 		4C10F02C27555D4D003E5DF2 /* gamerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02B27555D4D003E5DF2 /* gamerInfo.swift */; };
 		4C10F02E27555D88003E5DF2 /* myAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02D27555D88003E5DF2 /* myAds.swift */; };
+		4C42D05C275A8211006CB4A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C42D05E275A8211006CB4A6 /* Info.plist */; };
+		4C691D24275A39B10003B0C8 /* gameViewOneP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C691D23275A39B10003B0C8 /* gameViewOneP.swift */; };
+		4C691D26275A3F750003B0C8 /* Song-Of-Coronos.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C691D25275A3F750003B0C8 /* Song-Of-Coronos.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		4C10F02927555D1B003E5DF2 /* centerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = centerScreen.swift; sourceTree = "<group>"; };
 		4C10F02B27555D4D003E5DF2 /* gamerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gamerInfo.swift; sourceTree = "<group>"; };
 		4C10F02D27555D88003E5DF2 /* myAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myAds.swift; sourceTree = "<group>"; };
+		4C42D05D275A8211006CB4A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		4C691D23275A39B10003B0C8 /* gameViewOneP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewOneP.swift; sourceTree = "<group>"; };
+		4C691D25275A3F750003B0C8 /* Song-Of-Coronos.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Song-Of-Coronos.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 		4C10EFFF27555A02003E5DF2 = {
 			isa = PBXGroup;
 			children = (
+				4C42D05B275A4641006CB4A6 /* iOS */,
 				4C10F00A27555A02003E5DF2 /* The Brawl */,
 				4C10F00927555A02003E5DF2 /* Products */,
 			);
@@ -69,6 +76,7 @@
 		4C10F00A27555A02003E5DF2 /* The Brawl */ = {
 			isa = PBXGroup;
 			children = (
+				4C691D29275A40E30003B0C8 /* Fonts */,
 				4C10F01F27555B28003E5DF2 /* Screens */,
 				4C10F01E27555B22003E5DF2 /* Managers - Data */,
 				4C10F00B27555A02003E5DF2 /* The_BrawlApp.swift */,
@@ -104,6 +112,7 @@
 				4C10F02827555D07003E5DF2 /* Extracted */,
 				4C10F02227555C1B003E5DF2 /* launcherGame.swift */,
 				4C10F02627555CD0003E5DF2 /* gameViewTwoP.swift */,
+				4C691D23275A39B10003B0C8 /* gameViewOneP.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -116,6 +125,22 @@
 				4C10F02D27555D88003E5DF2 /* myAds.swift */,
 			);
 			path = Extracted;
+			sourceTree = "<group>";
+		};
+		4C42D05B275A4641006CB4A6 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4C42D05E275A8211006CB4A6 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		4C691D29275A40E30003B0C8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4C691D25275A3F750003B0C8 /* Song-Of-Coronos.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,8 +202,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C42D05C275A8211006CB4A6 /* Info.plist in Resources */,
 				4C10F01327555A03003E5DF2 /* Preview Assets.xcassets in Resources */,
 				4C10F01027555A03003E5DF2 /* Assets.xcassets in Resources */,
+				4C691D26275A3F750003B0C8 /* Song-Of-Coronos.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +220,7 @@
 				4C10F01527555A03003E5DF2 /* Persistence.swift in Sources */,
 				4C10F02327555C1B003E5DF2 /* launcherGame.swift in Sources */,
 				4C10F02E27555D88003E5DF2 /* myAds.swift in Sources */,
+				4C691D24275A39B10003B0C8 /* gameViewOneP.swift in Sources */,
 				4C10F00E27555A02003E5DF2 /* ContentView.swift in Sources */,
 				4C10F01827555A03003E5DF2 /* The_Brawl.xcdatamodeld in Sources */,
 				4C10F00C27555A02003E5DF2 /* The_BrawlApp.swift in Sources */,
@@ -204,6 +232,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4C42D05E275A8211006CB4A6 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C42D05D275A8211006CB4A6 /* Base */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4C10F01927555A03003E5DF2 /* Debug */ = {

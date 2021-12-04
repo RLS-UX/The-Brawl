@@ -11,6 +11,7 @@ import SwiftUI
 struct launcherGame: View {
     @State var rulesOfGame = gamerules[Int.random(in: 0...4)]
     @State var goToView = false
+    @State var onPlayer = false
     @State var textDegree = Double.random(in: -5...5)
     @State private var hasTimeElapsed = false
     var body: some View {
@@ -18,18 +19,50 @@ struct launcherGame: View {
     let theRadius:CGFloat = 2
         ZStack {
             if goToView == false {
+                
                 Rectangle()
                     .ignoresSafeArea()
-                .foregroundColor(.black) }
+                    .foregroundColor(.black)
+                centerScreen()
+                    .padding(-40)
+                    .rotationEffect(.degrees(0))
+                    .ignoresSafeArea()
+                    .opacity(0.10)
+            }
             if goToView == false {
+                VStack {
+                    Spacer()
+                
+                Button(action: {
+                    self.onPlayer = true
+                    self.goToView = true
+                    for family in UIFont.familyNames.sorted() {
+                        let names = UIFont.fontNames(forFamilyName: family)
+                        print("Family: \(family) Font names: \(names)")
+                        print("__")
+                    }
+                }, label: {
+                    
+                    Text("1 Players")
+                        .font(Font.custom("Zapfino", size: 22))
+                        .foregroundColor(.black)
+                        .padding()
+                        .shadow(color: .red, radius: theRadius, x: -xy, y: xy)
+                        .shadow(color: .blue, radius: theRadius, x: xy, y: -xy)
+                        .shadow(color: .white, radius: theRadius, x: 0, y: 0)
+                        .shadow(color: .green, radius: theRadius, x: -xy, y: xy)
+                        .rotationEffect(.degrees(textDegree))
+                    Text("")
+                })
+                
                 Button(action: {
                     self.goToView = true
                 }, label: {
-                    VStack {
+                    
                         
-                        Spacer()
+                
                         Text("2 Players")
-                            .bold()
+                            .font(Font.custom("Zapfino", size: 22))
                             .foregroundColor(.black)
                             .padding()
                             .shadow(color: .red, radius: theRadius, x: -xy, y: xy)
@@ -38,26 +71,35 @@ struct launcherGame: View {
                             .shadow(color: .green, radius: theRadius, x: -xy, y: xy)
                             .rotationEffect(.degrees(-textDegree))
                         Text("")
-                    } } )
-            } else {
-                gameViewTwoP().transition(.slide)
+                     } )
+                } } else {
+                if onPlayer == true {
+                    gameViewOneP().transition(.slide)
+                } else {
+                    gameViewTwoP().transition(.slide)
+                }
             }
             if goToView == false {
                 VStack{
+                    Text(" ")
                     Text(rulesOfGame)
                         .bold()
                         .multilineTextAlignment(.center)
                         .gradientForeground(colors: [.brown,.yellow,.brown])
-                        .font(.system(size: CGFloat.random(in: 20...30)))
+                        .font(Font.custom("Zapfino", size: 32))
                         .rotationEffect(.degrees(textDegree))
+               Spacer()
                 }.onTapGesture {
                     self.rulesOfGame = gamerules[Int.random(in: 0...4)]
                     self.textDegree = Double.random(in: -5...5)
                 }
                 
-            };}
+            }
+            }
+        
     }
 }
+
 
 
 extension View {
