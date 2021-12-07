@@ -44,7 +44,7 @@ struct gamerInfo: View {
                         .bold()
                         .foregroundColor(healtColor(healt: swordInfo))
                 }.padding(0)
-                .font(.title3)
+                .font(.system(size: 18))
                 .shadow(color: .white, radius: 1, x: -1, y: -1)
                 .shadow(color: .black, radius: 2, x: 1, y: 1)
                 .shadow(color: .black, radius: 1, x: 1, y: 1)

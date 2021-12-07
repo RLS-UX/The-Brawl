@@ -233,7 +233,7 @@ struct GradientButtonStyle: ButtonStyle {
             .scaledToFill()
             .minimumScaleFactor(0.1)
             .lineLimit(1)
-            .font(.system(size: 14))
+            .font(Font.custom("Zapfino", size: 12))
             .foregroundColor(.white)
             .padding()
             .shadow(color: Color("myBrown-1"), radius: 0, x: 0, y: -1)
