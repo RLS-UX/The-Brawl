@@ -39,7 +39,7 @@ struct gameViewOneP: View {
                     .padding(-20)
                     .opacity(0.10)
               
-                
+                // IA
                 if pWhoGame != 0 {
                     Text("") //\(timeRemaining)")
                         .foregroundColor(.white)
@@ -121,11 +121,12 @@ struct gameViewOneP: View {
                                         self.pIAStats = tempAction.pTwoResult
                                         self.pOneStats = tempAction.pOneResult
                                         self.lastAction = tempAction.gameSaying
+                                        self.pWhoGame = 180
                                         self.colorForPlay = [.black,Color("myBrown"),.black]
                                     }) {
                                         Text("Load")
                                             .bold()
-                                    }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-2")],numDegrees: -5))
+                                    }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-2")],numDegrees: 5))
                                     
                                 }
                             }
@@ -142,7 +143,7 @@ struct gameViewOneP: View {
                                     }) {
                                         Text("Sabotage")
                                             .bold()
-                                    }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-2")],numDegrees: 5))
+                                    }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-2")],numDegrees: -5))
                                     
                                 }
                                 Spacer()
