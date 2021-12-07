@@ -1,8 +1,8 @@
 # The-Brawl
 
-Small card game that I adapt to the iPhone.
+Game between friends, transform into iOS game.
+Personal challenge, do it in SwiftUI.
 
-For now, it’s designed with a lot of swiftUI.
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](parentheze.fr)  [![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](parentheze.fr)
 
