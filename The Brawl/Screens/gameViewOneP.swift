@@ -30,14 +30,18 @@ struct gameViewOneP: View {
                 Rectangle()
                     .foregroundColor(.black)
                     .ignoresSafeArea()
+                
                 LinearGradient(colors: colorForPlay, startPoint: .bottom, endPoint: .top)
                     .blur(radius: 90)
                     .ignoresSafeArea()
                     .opacity(0.7)
                 centerScreen()
                     .ignoresSafeArea()
-                    .padding(-20)
-                    .opacity(0.10)
+                    .opacity(0.175)
+                LinearGradient(colors: colorForPlay, startPoint: .bottom, endPoint: .top)
+                    .blur(radius: 90)
+                    .ignoresSafeArea()
+                    .opacity(0.1)
               
                 // IA
                 if pWhoGame != 0 {
@@ -62,24 +66,13 @@ struct gameViewOneP: View {
                                 self.colorForPlay = [.gray,Color("myBrown-1"),.gray]
                             }
                         }
-                    
-                    
                 }
                 VStack {
-                    Spacer()
-                    Text(lastAction)
-                        .bold()
-                        .frame(width: geometry.size.width)
+                    Text("")
+                        .frame(width: geometry.size.width, height: geometry.size.height*0.15)
+                        topScreen(screenTxt: lastAction)
                         .scaledToFit()
-                        .minimumScaleFactor(0.01)
-                        .lineLimit(4)
-                        .font(Font.custom("Zapfino", size: 62))
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
-                        .shadow(color: .black, radius: 2, x: -2, y: -2)
-                        .shadow(color: .black, radius: 2, x: 2, y: 2)
-                        .padding(0)
-                    Spacer()
+                        .frame(width: geometry.size.width)
                     HStack {
                         gamerInfo(nameInfo: "I.A.", healthInfo: pIAStats[0], swordInfo: pIAStats[1])
                             .scaledToFit()
@@ -88,16 +81,10 @@ struct gameViewOneP: View {
                             .scaledToFit()
                             .frame(width: geometry.size.width*0.45)
                     }
-                    .padding(-0)
                     
                     
                     
-                    Spacer()
                     if pWhoGame == 0 {
-                        Spacer()
-                        Spacer()
-                        Text("\r\r\r\r\r")
-                        Spacer()
                         HStack{
                             VStack{
                                 if pOneStats[2] == 0 {
@@ -114,7 +101,7 @@ struct gameViewOneP: View {
                                     }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-2")],numDegrees: 6))
                                     
                                 }
-                                Spacer()
+//                                Spacer()
                                 if pOneStats[2] == 0 {
                                     Button(action: {
                                         let tempAction = gameManager(oderExe: 2, pOne: pOneStats, pTwo: pIAStats)
@@ -130,7 +117,7 @@ struct gameViewOneP: View {
                                     
                                 }
                             }
-                            Spacer()
+//                            Spacer()
                             VStack{
                                 if pOneStats[2] == 0 {
                                     Button(action: {
@@ -146,7 +133,7 @@ struct gameViewOneP: View {
                                     }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown-2")],numDegrees: -5))
                                     
                                 }
-                                Spacer()
+//                                Spacer()
                                 Button(action: {
                                     let tempAction = gameManager(oderExe: 4, pOne: pOneStats, pTwo: pIAStats)
                                     self.pIAStats = tempAction.pTwoResult
@@ -162,10 +149,10 @@ struct gameViewOneP: View {
                         }
                     }
                     
-                }.padding()
+                }   .ignoresSafeArea()
                     .scaledToFit()
-                    .frame(width: geometry.size.width*0.8)
-                
+                    .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+                    
                 
             }
         }

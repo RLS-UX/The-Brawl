@@ -21,6 +21,7 @@
 		4C10F02C27555D4D003E5DF2 /* gamerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02B27555D4D003E5DF2 /* gamerInfo.swift */; };
 		4C10F02E27555D88003E5DF2 /* myAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10F02D27555D88003E5DF2 /* myAds.swift */; };
 		4C42D05C275A8211006CB4A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C42D05E275A8211006CB4A6 /* Info.plist */; };
+		4C67E44E275FE99A00090272 /* topScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67E44D275FE99A00090272 /* topScreen.swift */; };
 		4C691D24275A39B10003B0C8 /* gameViewOneP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C691D23275A39B10003B0C8 /* gameViewOneP.swift */; };
 		4C691D26275A3F750003B0C8 /* Song-Of-Coronos.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C691D25275A3F750003B0C8 /* Song-Of-Coronos.ttf */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		4C10F02B27555D4D003E5DF2 /* gamerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gamerInfo.swift; sourceTree = "<group>"; };
 		4C10F02D27555D88003E5DF2 /* myAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myAds.swift; sourceTree = "<group>"; };
 		4C42D05D275A8211006CB4A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		4C67E44D275FE99A00090272 /* topScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topScreen.swift; sourceTree = "<group>"; };
 		4C691D23275A39B10003B0C8 /* gameViewOneP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewOneP.swift; sourceTree = "<group>"; };
 		4C691D25275A3F750003B0C8 /* Song-Of-Coronos.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Song-Of-Coronos.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 				4C10F02927555D1B003E5DF2 /* centerScreen.swift */,
 				4C10F02B27555D4D003E5DF2 /* gamerInfo.swift */,
 				4C10F02D27555D88003E5DF2 /* myAds.swift */,
+				4C67E44D275FE99A00090272 /* topScreen.swift */,
 			);
 			path = Extracted;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				4C10F02E27555D88003E5DF2 /* myAds.swift in Sources */,
 				4C691D24275A39B10003B0C8 /* gameViewOneP.swift in Sources */,
 				4C10F00E27555A02003E5DF2 /* ContentView.swift in Sources */,
+				4C67E44E275FE99A00090272 /* topScreen.swift in Sources */,
 				4C10F01827555A03003E5DF2 /* The_Brawl.xcdatamodeld in Sources */,
 				4C10F00C27555A02003E5DF2 /* The_BrawlApp.swift in Sources */,
 				4C10F02C27555D4D003E5DF2 /* gamerInfo.swift in Sources */,
