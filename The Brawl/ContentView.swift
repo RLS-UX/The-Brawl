@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         ZStack{
             
-        Text(" ")
+        Text("")
             .onReceive(timer) { _ in
                 if timeRemaining > 0 {
                     timeRemaining -= 1

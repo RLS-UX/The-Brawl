@@ -17,5 +17,5 @@ let gamerules = ["Rule 1 - Each player starts with 30 Health Points",
 let theGameSay = ["Error order no found(01)"," Première action conseillée : \rCharger le bouclier","","","",""]
 
 
-let defaultData = ["Player 1","Player 2","Light"]
+var defaultData = ["Player 1","Player 2","Light"]
 

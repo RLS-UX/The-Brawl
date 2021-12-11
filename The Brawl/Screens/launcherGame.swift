@@ -10,6 +10,7 @@ import SwiftUI
 struct launcherGame: View {
     @State var rulesOfGame = gamerules[Int.random(in: 0...4)]
     @State var textDegree = Double.random(in: -5...5)
+    @State var settingModif:[String] = defaultData
     var body: some View {
         let xy:CGFloat = 1
         let theRadius:CGFloat = 2
@@ -73,7 +74,7 @@ struct launcherGame: View {
                 )
                 HStack{
                     Spacer()
-                    NavigationLink(destination: settingModal(settingButton: true), label: {
+                    NavigationLink(destination: settingModal(settingButton: true, settingModif: defaultData), label: {
                         Image(systemName: "gearshape.circle.fill")
                             .resizable()
                             .scaledToFit()

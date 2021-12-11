@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct settingModal: View {
     @State var settingButton:Bool
-    @State var settingModif = defaultData
+    @State var settingModif:[String] = defaultData
     var body: some View {
-        
+        VStack{
         List {
                                     HStack {
                                         Text("Name One :").font(.headline)
@@ -21,14 +22,20 @@ struct settingModal: View {
                                     .padding(.trailing)
                                     HStack {
                                         Text("Name Two :").font(.headline)
-                                        TextField("Name...",text: $settingModif[0]).foregroundColor(.brown)
+                                        TextField("Name...",text: $settingModif[1]).foregroundColor(.brown)
                                             
                                     } }
-    }
+//            Button(action: {
+//                self.defaultData = settingModif
+//            }, label: {
+//                Text("Save")
+//            })
+        }
+        }
 }
 
 struct settingModal_Previews: PreviewProvider {
     static var previews: some View {
-        settingModal(settingButton: true)
+        settingModal(settingButton: true,settingModif: defaultData)
     }
 }
