@@ -15,7 +15,8 @@ struct gameViewOneP: View {
     @State var lastAction:String = "Recommended first action:\rchange shield"
     @State var timeRemaining = 3
     @State var theOrder = 7
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    @State var theName = defaultData[0]
 
     
     var body: some View {
@@ -51,13 +52,19 @@ struct gameViewOneP: View {
                             if timeRemaining > 0 {
                                 timeRemaining -= 1
                             } else {
+                                
                                 if theOrder == 6 {
                                     self.theOrder = 8
                                 } else {
-                                    self.theOrder = Int.random(in: 4...8)
-                                }
+                                    if pIAStats[1] < 7 && theOrder != 6 {
+                                        self.theOrder = 5
+                                    } else if pIAStats[1] > 10 && theOrder != 6 {
+                                        self.theOrder = 6
+                                    } else    {
+                                    self.theOrder = Int.random(in: 5...8)
+                                    } }
                                 print(theOrder)
-                                var tempAction = gameManager(oderExe: theOrder, pOne: pOneStats, pTwo: pIAStats)
+                                var tempAction = gameManager(oderExe: theOrder, pOne: pOneStats, pTwo: pIAStats, nameP1Imp: theName, nameP2Imp: "IA")
                                 self.pIAStats = tempAction.pTwoResult
                                 self.pOneStats = tempAction.pOneResult
                                 self.lastAction = tempAction.gameSaying
@@ -77,7 +84,7 @@ struct gameViewOneP: View {
                         gamerInfo(nameInfo: "I.A.", healthInfo: pIAStats[0], swordInfo: pIAStats[1])
                             .scaledToFit()
                             .frame(width: geometry.size.width*0.45)
-                        gamerInfo(nameInfo: "Player 1", healthInfo: pOneStats[0], swordInfo: pOneStats[1])
+                        gamerInfo(nameInfo: theName, healthInfo: pOneStats[0], swordInfo: pOneStats[1])
                             .scaledToFit()
                             .frame(width: geometry.size.width*0.45)
                     }
@@ -89,7 +96,7 @@ struct gameViewOneP: View {
                             VStack{
                                 if pOneStats[2] == 0 {
                                     Button(action: {
-                                        let tempAction = gameManager(oderExe: 1, pOne: pOneStats, pTwo: pIAStats)
+                                        let tempAction = gameManager(oderExe: 1, pOne: pOneStats, pTwo: pIAStats, nameP1Imp: theName, nameP2Imp: "IA")
                                         self.pIAStats = tempAction.pTwoResult
                                         self.pOneStats = tempAction.pOneResult
                                         self.lastAction = tempAction.gameSaying
@@ -104,7 +111,7 @@ struct gameViewOneP: View {
 //                                Spacer()
                                 if pOneStats[2] == 0 {
                                     Button(action: {
-                                        let tempAction = gameManager(oderExe: 2, pOne: pOneStats, pTwo: pIAStats)
+                                        let tempAction = gameManager(oderExe: 2, pOne: pOneStats, pTwo: pIAStats, nameP1Imp: theName, nameP2Imp: "IA")
                                         self.pIAStats = tempAction.pTwoResult
                                         self.pOneStats = tempAction.pOneResult
                                         self.lastAction = tempAction.gameSaying
@@ -121,7 +128,7 @@ struct gameViewOneP: View {
                             VStack{
                                 if pOneStats[2] == 0 {
                                     Button(action: {
-                                        let tempAction = gameManager(oderExe: 3, pOne: pOneStats, pTwo: pIAStats)
+                                        let tempAction = gameManager(oderExe: 3, pOne: pOneStats, pTwo: pIAStats, nameP1Imp: theName, nameP2Imp: "IA")
                                         self.pIAStats = tempAction.pTwoResult
                                         self.pOneStats = tempAction.pOneResult
                                         self.lastAction = tempAction.gameSaying
@@ -135,7 +142,7 @@ struct gameViewOneP: View {
                                 }
 //                                Spacer()
                                 Button(action: {
-                                    let tempAction = gameManager(oderExe: 4, pOne: pOneStats, pTwo: pIAStats)
+                                    let tempAction = gameManager(oderExe: 4, pOne: pOneStats, pTwo: pIAStats, nameP1Imp: theName, nameP2Imp: "IA")
                                     self.pIAStats = tempAction.pTwoResult
                                     self.pOneStats = tempAction.pOneResult
                                     self.lastAction = tempAction.gameSaying

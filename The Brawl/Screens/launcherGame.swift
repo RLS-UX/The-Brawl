@@ -5,7 +5,6 @@
 //  Created by rémy seillier on 29/11/2021.
 //
 
-
 import SwiftUI
 
 struct launcherGame: View {
@@ -38,8 +37,6 @@ struct launcherGame: View {
                     self.goToView = true
                     for family in UIFont.familyNames.sorted() {
                         let names = UIFont.fontNames(forFamilyName: family)
-                        print("Family: \(family) Font names: \(names)")
-                        print("__")
                     }
                 }, label: {
                     
@@ -72,6 +69,7 @@ struct launcherGame: View {
                             .rotationEffect(.degrees(-textDegree))
                         Text("")
                      } )
+                    
                 } } else {
                 if onPlayer == true {
                     gameViewOneP().transition(.slide)

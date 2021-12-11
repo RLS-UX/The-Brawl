@@ -38,11 +38,15 @@ struct gameStructPlayer {
 
 
 
-func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int]) -> (pOneResult:[Int], pTwoResult:[Int], gameSaying:String) {
+func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int], nameP1Imp:String, nameP2Imp:String) -> (pOneResult:[Int], pTwoResult:[Int], gameSaying:String) {
     var pOneResult:[Int] = [0,0,0]
     var pTwoResult:[Int] = [0,0,0]
     var gameSaying:String = " "
+    var nameP1 = "nameP1Imp"
+    var nameP2 = "nameP2Imp"
     
+    nameP1 = nameP1Imp
+    nameP2 = nameP2Imp
     pOneResult = pOne
     pTwoResult = pTwo
     
@@ -54,21 +58,21 @@ func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int]) -> (pOneResult:[Int], pTwo
     if oderExe == 1 {
         let tempShield = cardSorting()
         pOneResult[1] = tempShield
-        gameSaying = "Player 1's new shield is  \(tempShield)."
+        gameSaying = "\(nameP1) new shield is  \(tempShield)."
     }
     
     //Player 1 charge an Attack
     if oderExe == 2 {
         let tempChargeAttack = cardSorting()
         pOneResult[2] = tempChargeAttack
-        gameSaying = "Player 1 has charged an attack."
+        gameSaying = "\(nameP1) has charged an attack."
     }
     
     //Modify shield for the other Player
     if oderExe == 3 {
         let tempShield = cardSorting()
         pTwoResult[1] = tempShield
-        gameSaying = "Player 2's new shield is \(tempShield)."
+        gameSaying = "\(nameP2) new shield is \(tempShield)."
     }
     
     //Player 1 tries to attack
@@ -78,7 +82,7 @@ func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int]) -> (pOneResult:[Int], pTwo
             let suspendedAttack = pOne[2]
             if (tempAttaque+suspendedAttack) >= pTwo[1] {
                 pTwoResult[0] =  pTwo[0]-((tempAttaque+suspendedAttack)-pTwo[1])
-                gameSaying = "Player 1 made a charged attack. The charge was \(suspendedAttack) & \(tempAttaque).\rPlayer 2 has \(pTwoResult[0]) health"
+                gameSaying = "\(nameP1) made a charged attack. The charge was \(suspendedAttack) & \(tempAttaque).\r\(nameP2) has \(pTwoResult[0]) health"
                 pTwoResult[2] = 0
                 pOneResult[2] = 0
             }
@@ -89,7 +93,7 @@ func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int]) -> (pOneResult:[Int], pTwo
         } else {
             if tempAttaque >= pTwo[1] {
                 pTwoResult[0] =  pTwo[0]-(tempAttaque-pTwo[1])
-                gameSaying = "Player 1 attacked, he made an attack of  \(tempAttaque).\rPlayer 2 lost \(tempAttaque-pTwo[1]) health."
+                gameSaying = "\(nameP1) attacked, he made an attack of  \(tempAttaque).\r\(nameP2) lost \(tempAttaque-pTwo[1]) health."
                 pTwoResult[2] = 0
                 pOneResult[2] = 0
             } else {
@@ -100,21 +104,21 @@ func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int]) -> (pOneResult:[Int], pTwo
     if oderExe == 5 {
         let tempShield = cardSorting()
         pTwoResult[1] = tempShield
-        gameSaying = "Player 2's new shield is \(tempShield)."
+        gameSaying = "\(nameP2) new shield is \(tempShield)."
     }
     
     //Player 2 charge an Attack
     if oderExe == 6 {
         let tempChargeAttack = cardSorting()
         pTwoResult[2] = tempChargeAttack
-        gameSaying = "Player 2 has charged an attack."
+        gameSaying = "\(nameP2) has charged an attack."
     }
     
     //Modify shield for the other Player
     if oderExe == 7 {
         let tempShield = cardSorting()
         pOneResult[1] = tempShield
-        gameSaying = "Player 1's new shield is\(tempShield)."
+        gameSaying = "\(nameP1)'s new shield is\(tempShield)."
     }
     
     //Player 2 tries to attack
@@ -124,7 +128,7 @@ func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int]) -> (pOneResult:[Int], pTwo
             let suspendedAttack = pTwo[2]
             if (tempAttaque+suspendedAttack) >= pOne[1] {
                 pOneResult[0] = pOne[0]-((tempAttaque+suspendedAttack)-pOne[1])
-                gameSaying = "Player 2 made a charged attack. The charge was \(suspendedAttack) & \(tempAttaque).\rPlayer 1 has \(pOneResult[0]) health."
+                gameSaying = "\(nameP2) made a charged attack. The charge was \(suspendedAttack) & \(tempAttaque).\r\(nameP1) has \(pOneResult[0]) health."
                 pTwoResult[2] = 0
                 pOneResult[2] = 0
             }
@@ -135,7 +139,7 @@ func gameManager(oderExe:Int, pOne:[Int], pTwo:[Int]) -> (pOneResult:[Int], pTwo
         } else {
             if tempAttaque >= pOne[1] {
                 pOneResult[0] = pOne[0]-(tempAttaque-pOne[1])
-                gameSaying = "Player 2 attacked, he made an attack of  \(tempAttaque).\rPlayer 2 has \(tempAttaque-pOne[1]) health."
+                gameSaying = "\(nameP2) attacked, he made an attack of  \(tempAttaque).\r\(nameP2) has \(tempAttaque-pOne[1]) health."
                 pTwoResult[2] = 0
                 pOneResult[2] = 0
             } else {

@@ -24,10 +24,10 @@ struct topScreen: View {
                     .scaledToFit()
                     .minimumScaleFactor(0.01)
                     .lineLimit(4)
-                    .font(Font.custom("Zapfino", size: 30))
-                    .foregroundColor(.yellow)
+                    .font(Font.custom("Song-of-coronos", size: 30))
+                    .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .shadow(color: .white, radius: 1, x: -1, y: -1)
+                    .shadow(color: .yellow, radius: 1, x: -1, y: -1)
                     .shadow(color: .black, radius: 2, x: 2, y: 2)
                     .padding(0)
                 

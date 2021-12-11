@@ -23,7 +23,7 @@ struct gamerInfo: View {
 
             VStack{
                 Text(nameInfo)
-                    .font(.title2)
+                    .font(.title3)
                     .bold()
                     .foregroundColor(.white)
                     .shadow(color: .black, radius: 1, x: 1, y: 1)
@@ -33,14 +33,14 @@ struct gamerInfo: View {
                 HStack {
                     Image(systemName: "suit.heart.fill")
                         .foregroundColor(Color("myBrown"))
-                    Text(": \(healthInfo)")
+                    Text(":\(healthInfo)")
                         .bold()
                         .foregroundColor(healtColor(healt: healthInfo))
                     Text("   ")
                     Image(systemName: "shield.lefthalf.fill")
                         .foregroundColor(Color("myBrown"))
                         .foregroundStyle(.regularMaterial)
-                    Text(": \(swordInfo)")
+                    Text(":\(swordInfo)")
                         .bold()
                         .foregroundColor(healtColor(healt: swordInfo))
                 }.padding(0)

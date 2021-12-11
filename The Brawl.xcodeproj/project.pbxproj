@@ -24,6 +24,7 @@
 		4C67E44E275FE99A00090272 /* topScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67E44D275FE99A00090272 /* topScreen.swift */; };
 		4C691D24275A39B10003B0C8 /* gameViewOneP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C691D23275A39B10003B0C8 /* gameViewOneP.swift */; };
 		4C691D26275A3F750003B0C8 /* Song-Of-Coronos.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C691D25275A3F750003B0C8 /* Song-Of-Coronos.ttf */; };
+		4C8619BC2764D94B00B5DF46 /* settingModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8619BB2764D94B00B5DF46 /* settingModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		4C67E44D275FE99A00090272 /* topScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topScreen.swift; sourceTree = "<group>"; };
 		4C691D23275A39B10003B0C8 /* gameViewOneP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewOneP.swift; sourceTree = "<group>"; };
 		4C691D25275A3F750003B0C8 /* Song-Of-Coronos.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Song-Of-Coronos.ttf"; sourceTree = "<group>"; };
+		4C8619BB2764D94B00B5DF46 /* settingModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				4C10F02B27555D4D003E5DF2 /* gamerInfo.swift */,
 				4C10F02D27555D88003E5DF2 /* myAds.swift */,
 				4C67E44D275FE99A00090272 /* topScreen.swift */,
+				4C8619BB2764D94B00B5DF46 /* settingModal.swift */,
 			);
 			path = Extracted;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			files = (
 				4C10F02527555C53003E5DF2 /* Data.swift in Sources */,
 				4C10F01527555A03003E5DF2 /* Persistence.swift in Sources */,
+				4C8619BC2764D94B00B5DF46 /* settingModal.swift in Sources */,
 				4C10F02327555C1B003E5DF2 /* launcherGame.swift in Sources */,
 				4C10F02E27555D88003E5DF2 /* myAds.swift in Sources */,
 				4C691D24275A39B10003B0C8 /* gameViewOneP.swift in Sources */,

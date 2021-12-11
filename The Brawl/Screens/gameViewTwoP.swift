@@ -15,7 +15,7 @@ struct gameViewTwoP: View {
     @State var pOneStats:[Int] = [30,4,0]     // <= [health,shield,charge Attack]
     @State var pTwoStats:[Int] = [30,4,0]
     @State var colorForPlay:[Color] =  [.gray,Color("myBrown-1"),.gray]
-    //[.teal,.purple,.teal]
+    @State var theName = defaultData
     @State var lastAction:String = "Recommended first action:\rchange shield"
     
     var body: some View {
@@ -40,7 +40,7 @@ struct gameViewTwoP: View {
                                     Spacer()
                                     if pTwoStats[2] == 0 {
                                         Button(action: {
-                                            let tempAction = gameManager(oderExe: 5, pOne: pOneStats, pTwo: pTwoStats)
+                                            let tempAction = gameManager(oderExe: 5, pOne: pOneStats, pTwo: pTwoStats, nameP1Imp: theName[0], nameP2Imp: theName[1])
                                             self.pTwoStats = tempAction.pTwoResult
                                             self.pOneStats = tempAction.pOneResult
                                             self.lastAction = tempAction.gameSaying
@@ -53,7 +53,7 @@ struct gameViewTwoP: View {
                                         }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown")],numDegrees: 6)) }
                                     if pTwoStats[2] == 0 {
                                         Button(action: {
-                                            let tempAction = gameManager(oderExe: 6, pOne: pOneStats, pTwo: pTwoStats)
+                                            let tempAction = gameManager(oderExe: 6, pOne: pOneStats, pTwo: pTwoStats, nameP1Imp: theName[0], nameP2Imp: theName[1])
                                             self.pTwoStats = tempAction.pTwoResult
                                             self.pOneStats = tempAction.pOneResult
                                             self.lastAction = tempAction.gameSaying
@@ -66,7 +66,7 @@ struct gameViewTwoP: View {
                                         }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown")],numDegrees: -5)) }
                                     if pTwoStats[2] == 0 {
                                         Button(action: {
-                                            let tempAction = gameManager(oderExe: 7, pOne: pOneStats, pTwo: pTwoStats)
+                                            let tempAction = gameManager(oderExe: 7, pOne: pOneStats, pTwo: pTwoStats, nameP1Imp: theName[0], nameP2Imp: theName[1])
                                             self.pTwoStats = tempAction.pTwoResult
                                             self.pOneStats = tempAction.pOneResult
                                             self.lastAction = tempAction.gameSaying
@@ -79,7 +79,7 @@ struct gameViewTwoP: View {
                                         }.buttonStyle(GradientButtonStyle(lesCouleurs: [.brown,Color("myBrown"),Color("myBrown")],numDegrees: 5))
                                     }
                                     Button(action: {
-                                        let tempAction = gameManager(oderExe: 8, pOne: pOneStats, pTwo: pTwoStats)
+                                        let tempAction = gameManager(oderExe: 8, pOne: pOneStats, pTwo: pTwoStats, nameP1Imp: theName[0], nameP2Imp: theName[1])
                                         self.pTwoStats = tempAction.pTwoResult
                                         self.pOneStats = tempAction.pOneResult
                                         self.lastAction = tempAction.gameSaying
@@ -141,7 +141,7 @@ struct gameViewTwoP: View {
                                 
                                 if pOneStats[2] == 0 {
                                     Button(action: {
-                                        let tempAction = gameManager(oderExe: 1, pOne: pOneStats, pTwo: pTwoStats)
+                                        let tempAction = gameManager(oderExe: 1, pOne: pOneStats, pTwo: pTwoStats, nameP1Imp: theName[0], nameP2Imp: theName[1])
                                         self.pTwoStats = tempAction.pTwoResult
                                         self.pOneStats = tempAction.pOneResult
                                         self.lastAction = tempAction.gameSaying
@@ -156,7 +156,7 @@ struct gameViewTwoP: View {
                                 }
                                 if pOneStats[2] == 0 {
                                     Button(action: {
-                                        let tempAction = gameManager(oderExe: 2, pOne: pOneStats, pTwo: pTwoStats)
+                                        let tempAction = gameManager(oderExe: 2, pOne: pOneStats, pTwo: pTwoStats, nameP1Imp: theName[0], nameP2Imp: theName[1])
                                         self.pTwoStats = tempAction.pTwoResult
                                         self.pOneStats = tempAction.pOneResult
                                         self.lastAction = tempAction.gameSaying
@@ -171,7 +171,7 @@ struct gameViewTwoP: View {
                                 }
                                 if pOneStats[2] == 0 {
                                     Button(action: {
-                                        let tempAction = gameManager(oderExe: 3, pOne: pOneStats, pTwo: pTwoStats)
+                                        let tempAction = gameManager(oderExe: 3, pOne: pOneStats, pTwo: pTwoStats, nameP1Imp: theName[0], nameP2Imp: theName[1])
                                         self.pTwoStats = tempAction.pTwoResult
                                         self.pOneStats = tempAction.pOneResult
                                         self.lastAction = tempAction.gameSaying
@@ -185,7 +185,7 @@ struct gameViewTwoP: View {
                                     
                                 }
                                 Button(action: {
-                                    let tempAction = gameManager(oderExe: 4, pOne: pOneStats, pTwo: pTwoStats)
+                                    let tempAction = gameManager(oderExe: 4, pOne: pOneStats, pTwo: pTwoStats, nameP1Imp: theName[0], nameP2Imp: theName[1])
                                     self.pTwoStats = tempAction.pTwoResult
                                     self.pOneStats = tempAction.pOneResult
                                     self.lastAction = tempAction.gameSaying
@@ -205,7 +205,7 @@ struct gameViewTwoP: View {
                 }
                 else
                 {
-                    Text("EndGame \rP L A Y E R   1 : \(pOneStats[0])\rP L A Y E R   2 : \(pTwoStats[0])\rTouch for restart")
+                    Text("EndGame \r\(theName[0]) : \(pOneStats[0])\r\(theName[1])  : \(pTwoStats[0])\rTouch for restart")
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(.white)
