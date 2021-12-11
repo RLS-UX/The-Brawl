@@ -9,8 +9,21 @@ import SwiftUI
 
 struct settingModal: View {
     @State var settingButton:Bool
+    @State var settingModif = defaultData
     var body: some View {
-        Text("settings")
+        
+        List {
+                                    HStack {
+                                        Text("Name One :").font(.headline)
+                                        TextField("Name...", text: $settingModif[0]).foregroundColor(.brown)
+                                            
+                                    }
+                                    .padding(.trailing)
+                                    HStack {
+                                        Text("Name Two :").font(.headline)
+                                        TextField("Name...",text: $settingModif[0]).foregroundColor(.brown)
+                                            
+                                    } }
     }
 }
 

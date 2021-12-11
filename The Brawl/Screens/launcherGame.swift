@@ -9,37 +9,36 @@ import SwiftUI
 
 struct launcherGame: View {
     @State var rulesOfGame = gamerules[Int.random(in: 0...4)]
-    @State var goToView = false
-    @State var onPlayer = false
     @State var textDegree = Double.random(in: -5...5)
-    @State private var hasTimeElapsed = false
     var body: some View {
-    let xy:CGFloat = 1
-    let theRadius:CGFloat = 2
+        let xy:CGFloat = 1
+        let theRadius:CGFloat = 2
+        NavigationView {
         ZStack {
-            if goToView == false {
+            Rectangle()
+                .ignoresSafeArea()
+                .foregroundColor(.black)
+
+            
+            VStack {
+
+                Text(rulesOfGame)
+                    .bold()
+                    .multilineTextAlignment(.center)
+                    .font(Font.custom("Zapfino", size: 32))
+                    .rotationEffect(.degrees(textDegree))
+                    .foregroundColor(.white)
+                    .shadow(color: .brown, radius: 1, x: 0, y: 0)
+                    .shadow(color: .yellow, radius: 3, x: 0, y: 0)
+                    .shadow(color: .white, radius: 4, x: 0, y: 0)
                 
-                Rectangle()
-                    .ignoresSafeArea()
-                    .foregroundColor(.black)
-                centerScreen()
-                    .padding(-40)
-                    .rotationEffect(.degrees(0))
-                    .ignoresSafeArea()
-                    .opacity(0.10)
-            }
-            if goToView == false {
-                VStack {
-                    Spacer()
-                
-                Button(action: {
-                    self.onPlayer = true
-                    self.goToView = true
-                    for family in UIFont.familyNames.sorted() {
-                        let names = UIFont.fontNames(forFamilyName: family)
-                    }
-                }, label: {
-                    
+                NavigationLink(destination: gameViewOneP()
+                               , label:
+                {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 25)
+                            .foregroundColor(.brown).opacity(0.2)
+                            .frame(width: 200, height: 80)
                     Text("1 Players")
                         .font(Font.custom("Zapfino", size: 22))
                         .foregroundColor(.black)
@@ -48,16 +47,17 @@ struct launcherGame: View {
                         .shadow(color: .blue, radius: theRadius, x: xy, y: -xy)
                         .shadow(color: .white, radius: theRadius, x: 0, y: 0)
                         .shadow(color: .green, radius: theRadius, x: -xy, y: xy)
-                        .rotationEffect(.degrees(textDegree))
-                    Text("")
-                })
-                
-                Button(action: {
-                    self.goToView = true
-                }, label: {
-                    
                         
-                
+                }
+                    .rotationEffect(.degrees(-textDegree))
+                } )
+                NavigationLink(destination: gameViewTwoP(),
+                               label:
+                {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 25)
+                            .foregroundColor(.brown).opacity(0.2)
+                            .frame(width: 200, height: 80)
                         Text("2 Players")
                             .font(Font.custom("Zapfino", size: 22))
                             .foregroundColor(.black)
@@ -66,48 +66,33 @@ struct launcherGame: View {
                             .shadow(color: .blue, radius: theRadius, x: xy, y: -xy)
                             .shadow(color: .white, radius: theRadius, x: 0, y: 0)
                             .shadow(color: .green, radius: theRadius, x: -xy, y: xy)
-                            .rotationEffect(.degrees(-textDegree))
-                        Text("")
-                     } )
+                            
+                    }.rotationEffect(.degrees(textDegree))
                     
-                } } else {
-                if onPlayer == true {
-                    gameViewOneP().transition(.slide)
-                } else {
-                    gameViewTwoP().transition(.slide)
+                }
+                )
+                HStack{
+                    Spacer()
+                    NavigationLink(destination: settingModal(settingButton: true), label: {
+                        Image(systemName: "gearshape.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40)
+                            .symbolRenderingMode(.hierarchical)
+                            .foregroundColor(.brown)
+                    })
                 }
             }
-            if goToView == false {
-                VStack{
-                    Text(" ")
-                    Text(rulesOfGame)
-                        .bold()
-                        .multilineTextAlignment(.center)
-                        .gradientForeground(colors: [.brown,.yellow,.brown])
-                        .font(Font.custom("Zapfino", size: 32))
-                        .rotationEffect(.degrees(textDegree))
-               Spacer()
-                }.onTapGesture {
-                    self.rulesOfGame = gamerules[Int.random(in: 0...4)]
-                    self.textDegree = Double.random(in: -5...5)
-                }
-                
-            }
-            }
-        
+        }.navigationTitle("").navigationBarHidden(true)
+        }
     }
 }
 
 
 
-extension View {
-    public func gradientForeground(colors: [Color]) -> some View {
-        self.overlay(LinearGradient(gradient: .init(colors: colors),
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing))
-            .mask(self)
-    }
-}
+
+
+
 
 
 struct launcherGame_Previews: PreviewProvider {
